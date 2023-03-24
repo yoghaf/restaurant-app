@@ -38,5 +38,4 @@ class Navigation extends HTMLElement {
   }
 }
 
-// Define the custom element
 customElements.define("navigation-resto", Navigation);
