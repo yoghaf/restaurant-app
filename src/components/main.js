@@ -1,4 +1,5 @@
 import navanimation from "../helpers/navAnimation";
+
 const main = () => {
   navanimation();
 };
