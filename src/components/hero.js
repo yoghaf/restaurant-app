@@ -7,7 +7,7 @@ class Navigation extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <section class="hero">
+    <section id="home" class="hero">
     <div class="hero-text">
       <h1>Indonesian Eatreviews</h1>
       <p>Hidangan nikmat tanpa merogoh kocek dalam-dalam!</p>

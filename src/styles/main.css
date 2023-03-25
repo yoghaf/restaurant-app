@@ -15,3 +15,17 @@ li {
 a {
   color: black;
 }
+.hidden-link {
+  position: absolute !important;
+
+  overflow: hidden;
+}
+.skip-link:focus {
+  background-color: #fff;
+  color: #000;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}

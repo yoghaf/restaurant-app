@@ -1,0 +1,66 @@
+footer {
+  background-color: antiquewhite;
+  padding: 1em;
+}
+.footer-desc {
+  display: flex;
+  gap: 1em;
+}
+.footer-btn-open {
+  display: block;
+}
+.footer-btn-close {
+  display: none;
+}
+.footer-acordion button svg {
+  font-size: 1em;
+}
+.footer-sec {
+  display: flex;
+  flex-direction: column;
+}
+.footer-sec ul {
+  display: none;
+  padding-left: 2em;
+  font-size: 0.8em;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.footer-sec ul li {
+  padding: 0.2em;
+}
+.social-media {
+  display: flex;
+  gap: 1em;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+.logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+  footer div:first-child {
+    display: flex;
+  }
+  .footer-btn-open {
+    display: none;
+  }
+  .footer-btn-close {
+    display: none;
+  }
+  .footer-sec ul {
+    display: block;
+  }
+}
