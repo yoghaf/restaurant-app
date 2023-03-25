@@ -14,6 +14,19 @@ const tabIndex = () => {
       content.focus();
     }
   });
+
+  const astyle = document.querySelectorAll("a");
+  const buttonstyle = document.querySelectorAll("button");
+
+  astyle.forEach((link) => {
+    link.style.minWidth = "40px";
+    link.style.minHeight = "40px";
+  });
+
+  buttonstyle.forEach((button) => {
+    button.style.minWidth = "40px";
+    button.style.minHeight = "40px";
+  });
 };
 
 export default tabIndex;

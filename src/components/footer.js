@@ -24,7 +24,7 @@ class Footer extends HTMLElement {
               </svg>
             </button>
           </div>
-          <div><a role="button" href="#">Tentang Eatreviews</a></div>
+          <div>Tentang Eatreviews</div>
         </div>
         <ul>
           <li><a role="button" href="#">Tentang Kami</a></li>
@@ -46,7 +46,7 @@ class Footer extends HTMLElement {
               </svg>
             </button>
           </div>
-          <div><a role="button" href="#">Telusuri</a></div>
+          <div>Telusuri</div>
         </div>
         <ul>
           <li><a role="button" href="#">Pusat Bantuan</a></li>
@@ -66,7 +66,7 @@ class Footer extends HTMLElement {
               </svg>
             </button>
           </div>
-          <div><a role="button" href="#">Dapatkan Aplikasi</a></div>
+          <div>Dapatkan Aplikasi</div>
         </div>
         <ul>
           <li><a role="button" href="#">Aplikasi Iphone</a></li>

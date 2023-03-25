@@ -6,7 +6,6 @@ import "../components/gallery";
 import "../components/footer";
 import main from "../components/main";
 
-console.log("Hello Coders! :)");
 document.addEventListener("DOMContentLoaded", () => {
   main();
 });

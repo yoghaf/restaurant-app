@@ -18,6 +18,9 @@
   overflow: hidden;
   gap: 1em;
 }
+.list-content-resto a {
+  font-weight: bold;
+}
 .img-resto {
   width: 200px;
   position: relative;
