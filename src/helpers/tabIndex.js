@@ -15,18 +15,18 @@ const tabIndex = () => {
     }
   });
 
-  const astyle = document.querySelectorAll("a");
-  const buttonstyle = document.querySelectorAll("button");
+//   const astyle = document.querySelectorAll("a");
+//   const buttonstyle = document.querySelectorAll("button");
 
-  astyle.forEach((link) => {
-    link.style.minWidth = "44px";
-    link.style.minHeight = "44px";
-  });
+//   astyle.forEach((link) => {
+//     link.style.minWidth = "44px";
+//     link.style.minHeight = "44px";
+//   });
 
-  buttonstyle.forEach((button) => {
-    button.style.minWidth = "44px";
-    button.style.minHeight = "44px";
-  });
+//   buttonstyle.forEach((button) => {
+//     button.style.minWidth = "44px";
+//     button.style.minHeight = "44px";
+//   });
 };
 
 export default tabIndex;
