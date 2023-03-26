@@ -19,13 +19,13 @@ const tabIndex = () => {
   const buttonstyle = document.querySelectorAll("button");
 
   astyle.forEach((link) => {
-    link.style.minWidth = "40px";
-    link.style.minHeight = "40px";
+    link.style.minWidth = "44px";
+    link.style.minHeight = "44px";
   });
 
   buttonstyle.forEach((button) => {
-    button.style.minWidth = "40px";
-    button.style.minHeight = "40px";
+    button.style.minWidth = "44px";
+    button.style.minHeight = "44px";
   });
 };
 
