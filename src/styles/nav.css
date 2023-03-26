@@ -36,9 +36,9 @@ button {
 }
 .nav-desktop li {
   width: 110px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .nav-desktop li:hover {
   background-color: #f2f1ec;
