@@ -1,42 +1,43 @@
-#list-resto {
+#recomen-resto {
   padding: 50px 0 50px 20px;
 }
 
-.title-resto h2 {
+.title-recomen h2 {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.5em;
 }
-.title-resto div {
+.title-recomen div {
   font-size: 1em;
   margin-bottom: 0.5em;
 }
-.list-content-resto {
+.list-content-recomen-resto div {
+  cursor: pointer;
+}
+.list-content-recomen-resto a {
+  font-weight: bold;
+}
+
+.list-content-recomen-resto {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
   gap: 1em;
 }
-.list-content-resto div {
-  cursor: pointer;
-}
-.list-content-resto a {
-  font-weight: bold;
-}
-.img-resto img:hover {
-  opacity: 0.8;
-  filter: brightness(110%);
-}
-.img-resto {
+.img-resto-recomen {
   width: 200px;
   position: relative;
 }
-.img-resto img {
+.img-resto-recomen img {
   width: 100%;
   object-fit: cover;
   height: 200px;
 }
-.img-resto button {
+.img-resto-recomen img:hover {
+  opacity: 0.8;
+  filter: brightness(110%);
+}
+.img-resto-recomen button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -51,13 +52,17 @@
 }
 
 @media screen and (min-width: 768px) {
-  .list-content-resto {
+  .list-content-recomen-resto {
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
   }
+  .img-resto-recomen {
+    width: 100%;
+    position: relative;
+  }
 }
-@media screen and (min-width: 1000px) {
-  .list-content-resto {
-    grid-template-columns: repeat(6, 1fr);
+@media screen and (min-width: 1100px) {
+  .img-resto-recomen img {
+    height: 270px;
   }
 }

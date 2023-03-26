@@ -2,6 +2,7 @@ import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
 import "../components/navigation";
 import "../components/hero";
+import "../components/recomendation";
 import "../components/gallery";
 import "../components/footer";
 import main from "../components/main";

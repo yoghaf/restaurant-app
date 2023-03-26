@@ -34,6 +34,16 @@ button {
 .nav-desktop ul {
   display: none;
 }
+.nav-desktop li {
+  width: 110px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.nav-desktop li:hover {
+  background-color: #f2f1ec;
+  border-radius: 25px;
+}
 .nav-hidden {
   width: 0;
   background-color: #ffffff;
