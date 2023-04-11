@@ -13,7 +13,7 @@
 }
 .list-content-resto {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   overflow: hidden;
   gap: 1em;
 }
@@ -28,7 +28,7 @@
   filter: brightness(110%);
 }
 .img-resto {
-  width: 200px;
+  width: 300px;
   position: relative;
 }
 .img-resto img {
@@ -53,12 +53,17 @@
 }
 @media screen and (min-width: 768px) {
   .list-content-resto {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1em;
   }
 }
 @media screen and (min-width: 1000px) {
   .list-content-resto {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-content-resto {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
