@@ -59,6 +59,10 @@
   font-size: bold;
   font-weight: 600;
 }
+#review-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
 @media screen and (min-width: 500px) {
   .detail-img-resto img {
     height: 300px;

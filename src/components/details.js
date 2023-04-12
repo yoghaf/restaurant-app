@@ -36,7 +36,7 @@ const Details = (resto) => {
 <div class="detail-img">
     <div class="detail-img-resto">
     <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" alt="${resto.name}" />
-    <button id="myButton">
+    <button id="favorite-button">
       <svg viewBox="0 0 24 24"  class="">
         <path
           fill="#ffffff"
@@ -89,6 +89,9 @@ const Details = (resto) => {
   </div>
   <div class="comment-review">
   <button id="review-button">Leave a Review</button>
+  </div>
+  <div id="review-modal">
+
   </div>
     </div>`;
 };
