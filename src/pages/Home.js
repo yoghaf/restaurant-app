@@ -3,7 +3,7 @@ import Gallery from "../components/gallery";
 const Home = {
   async render() {
     return `
-       <section id="list_resto"></section>
+       <div id="list_resto"></div>
       `;
   },
 

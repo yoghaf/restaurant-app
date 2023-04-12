@@ -12,7 +12,10 @@ const Gallery = (resto) => {
           return `
           <div>
           <div class="img-resto">
-            <img src="https://restaurant-api.dicoding.dev/images/large/${resto.pictureId}" alt="${resto.name}" />
+          <a role="button" href="#/detail/${resto.id}">
+          <img src="https://restaurant-api.dicoding.dev/images/large/${resto.pictureId}" alt="${resto.name}" />
+        </a>
+      
           </div>
           <div>
             <a role="button" href="#/detail/${resto.id}">

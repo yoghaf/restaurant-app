@@ -1,12 +1,19 @@
+import UrlParser from "../routes/url-parser";
+import Dicodingresto from "../data/dicoding-resto";
+import Details from "../components/details";
 const Detail = {
   async render() {
     return `
-          <h2>Detail Page</h2>
+         <section id="detail_resto"></section>
         `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const detailrestodata = await Dicodingresto.detailRestaurant(url.id);
+    const detailresto = document.querySelector("#detail_resto");
+    detailresto.innerHTML = Details(detailrestodata);
+    console.log(detailrestodata);
   },
 };
 

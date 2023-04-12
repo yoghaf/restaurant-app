@@ -9,7 +9,7 @@ class Navigation extends HTMLElement {
     <header>
     <nav class="nav-desktop">
       <div class="hamburger">
-        <button id="button-hamburger"  href="#">
+        <button id="button-hamburger"  href="#/">
           <svg viewBox="0 0 24 24" width="1em" height="1em" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M21 7.75H3v-1.5h18v1.5zm0 5H3v-1.5h18v1.5zm0 5H3v-1.5h18v1.5z"></path></svg>
         </button>
       </div>
