@@ -23,6 +23,7 @@ const Gallery = (resto) => {
               <div>${resto.name}</div>
             </a>
             <div>
+            <span>${resto.rating}</span>
             <svg class="" viewBox="0 0 128 24" width="68" height="12" aria-label="">
             ${Array(Math.floor(resto.rating))
               .fill()
@@ -51,7 +52,7 @@ const Gallery = (resto) => {
           </svg>
           
           
-          <span>${resto.rating}</span>
+       
         </div>
           <div>${resto.city}</div>
           </div>

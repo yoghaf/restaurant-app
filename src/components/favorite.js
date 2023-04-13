@@ -6,6 +6,8 @@ const FavoritePage = (resto) => {
       <div class="title-resto">
       <h2>Favorite Saya (${resto.length > 0 ? resto.length : "Belum ada favorite"}) </h2>
       </div>
+      
+    
       <div class="list-content-resto">       
       ${resto
         .map((resto) => {

@@ -1,6 +1,6 @@
 import "../styles/details.css";
 import CONFIG from "../globals/config";
-const Details = (resto) => {
+const Details = (resto, restodb) => {
   return `
     <div class="detail">
     <div>

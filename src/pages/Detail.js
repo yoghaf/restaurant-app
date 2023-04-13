@@ -17,7 +17,7 @@ const Detail = {
     detailresto.innerHTML = Details(detailrestodata);
     const reviewModal = document.querySelector("#review-modal");
     reviewModal.innerHTML = ReviewModal(detailrestodata);
-    console.log(detailrestodata);
+
     //favoritebtnevent
     const favoritebtn = document.querySelector("#favorite-button");
 
@@ -35,14 +35,11 @@ const Detail = {
         favoritefill.setAttribute("fill", "#ffffff");
         await FavoriteRestoIdb.deleteResto(detailrestodata.id);
       }
-
-      console.log(await FavoriteRestoIdb.getAllResto());
     });
 
     //reviewbtnevent
     const btn = document.querySelector("#review-button");
     btn.addEventListener("click", async () => {
-      console.log("terklik");
       const modals = document.querySelector("#modals");
       modals.style.display = "block";
     });
@@ -56,19 +53,21 @@ const Detail = {
 
     //submitbtnevent
     const submitbtn = document.querySelector("#submit-button");
+
     submitbtn.addEventListener("click", async (event) => {
       event.preventDefault();
       const name = document.querySelector("#name").value;
       const review = document.querySelector("#review").value;
+      const reviewrating = document.querySelector("#review-rating").value;
       const date = new Date();
       const datestring = date.toISOString();
       const reviewdata = {
         id: detailrestodata.id,
         name: name,
+        rating: reviewrating,
         review: review,
         date: datestring,
       };
-      console.log(reviewdata);
     });
   },
 };

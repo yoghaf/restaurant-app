@@ -10,7 +10,7 @@ const Home = {
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
     const resto = await Dicodingresto.allRestaurants();
-    console.log(resto);
+
     const restolist = document.querySelector("#list_resto");
     restolist.innerHTML = Gallery(resto);
   },
