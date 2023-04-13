@@ -1,0 +1,68 @@
+.loading {
+  padding: 50px 0 50px 20px;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+.container-loading {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  overflow: hidden;
+  gap: 1em;
+}
+
+/* .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+} */
+.card-image {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  background-color: #e0e0e0;
+  animation: pulse 1s infinite;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.card-rating,
+.card-title {
+  width: 80px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+  animation: pulse 1s infinite;
+}
+
+.card-city {
+  width: 50px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+  animation: pulse 1s infinite; /* Menggunakan animasi spinner selama 1 detik secara terus-menerus */
+}
+
+@media screen and (min-width: 600px) {
+  .container-loading {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container-loading {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

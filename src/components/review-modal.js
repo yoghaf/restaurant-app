@@ -10,8 +10,6 @@ const ReviewModal = (resto) => {
 
 <label for="name">Name</label>
 <input type="text" id="name" name="name" placeholder="Your name..">
-<label for="rating">Rating</label>
-<input type="number" id="review-rating" name="rating" placeholder="Your rating..">
 <label for="review">Review</label>
 <textarea id="review" name="review" placeholder="Write something.." style="height:200px"></textarea>
 <input id="submit-button" type="submit" value="Submit">

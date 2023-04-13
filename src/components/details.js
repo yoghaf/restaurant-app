@@ -73,7 +73,6 @@ const Details = (resto, restodb) => {
  <h4>${resto.rating}</h4>
  <span>(${resto.customerReviews.length} reviews)</span>
  </div>
- <div class="review">
  ${resto.customerReviews
    .map((review) => {
      return `<div class="review-item">
@@ -94,6 +93,7 @@ const Details = (resto, restodb) => {
   <div id="review-modal">
 
   </div>
+  <div id="success-modal"></div>
     </div>`;
 };
 export default Details;

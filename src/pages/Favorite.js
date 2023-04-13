@@ -22,8 +22,7 @@ const Favorite = {
     favoritebtn.addEventListener("click", async () => {
       const query = document.querySelector("#search-favorite-input").value;
       const favorite = await FavoriteRestoIdb.getAllResto();
-      console.log(favorite);
-      console.log(query);
+
       if (query !== "") {
         const result = favorite.filter((resto) => resto.name.toLowerCase().includes(query.toLowerCase()));
         if (result.length === 0) {

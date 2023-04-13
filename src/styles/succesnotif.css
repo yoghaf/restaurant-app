@@ -1,0 +1,160 @@
+/* successNotification.css */
+
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.animation {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.circle,
+.checkmark_stem,
+.checkmark_kick {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.circle {
+  background-color: #ffffff;
+  animation: circleAnim 2s ease-in-out infinite;
+}
+
+.checkmark_stem,
+.checkmark_kick {
+  background-color: #00cc00;
+  transform-origin: right center;
+}
+
+.checkmark_stem {
+  height: 8px;
+  width: 30px;
+  animation: checkmarkAnim 0.4s ease-in-out 1.6s;
+}
+
+.checkmark_kick {
+  height: 30px;
+  width: 8px;
+  animation: checkmarkAnim 0.4s ease-in-out 1.8s;
+}
+
+@keyframes circleAnim {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes checkmarkAnim {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+/* successNotification.css */
+
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.animation {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.circle,
+.checkmark_stem,
+.checkmark_kick {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.circle {
+  background-color: #ffffff;
+  animation: circleAnim 2s ease-in-out infinite;
+}
+
+.checkmark_stem,
+.checkmark_kick {
+  background-color: #00cc00;
+  transform-origin: right center;
+}
+
+.checkmark_stem {
+  height: 8px;
+  width: 30px;
+  animation: checkmarkAnim 0.4s ease-in-out 1.6s;
+}
+
+.checkmark_kick {
+  height: 30px;
+  width: 8px;
+  animation: checkmarkAnim 0.4s ease-in-out 1.8s;
+}
+
+@keyframes circleAnim {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes checkmarkAnim {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}

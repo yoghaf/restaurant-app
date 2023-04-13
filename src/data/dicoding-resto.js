@@ -1,4 +1,5 @@
 import API_ENDPOINT from "../globals/api-endpoint";
+import { hideLoading } from "../components/loading-details";
 class Dicodingresto {
   static async allRestaurants() {
     const response = await fetch(API_ENDPOINT.LIST);
@@ -6,10 +7,18 @@ class Dicodingresto {
     return responseJson.restaurants;
   }
   static async detailRestaurant(id) {
-    const response = await fetch(API_ENDPOINT.DETAIL(id));
-    const responseJson = await response.json();
-    return responseJson.restaurant;
+    try {
+      const response = await fetch(API_ENDPOINT.DETAIL(id));
+      const responseJson = await response.json();
+      hideLoading();
+      return responseJson.restaurant;
+    } catch (error) {
+      console.log(error);
+      hideLoading();
+      return null; // atau nilai default lain yang diinginkan
+    }
   }
+
   static async addReview(review) {
     const response = await fetch(API_ENDPOINT.REVIEW, {
       method: "POST",
