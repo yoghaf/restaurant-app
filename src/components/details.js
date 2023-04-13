@@ -73,6 +73,7 @@ const Details = (resto, restodb) => {
  <h4>${resto.rating}</h4>
  <span>(${resto.customerReviews.length} reviews)</span>
  </div>
+ <div id="review-list">
  ${resto.customerReviews
    .map((review) => {
      return `<div class="review-item">
