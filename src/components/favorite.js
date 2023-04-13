@@ -1,11 +1,10 @@
-import "../styles/gallery.css";
+import "../styles/favorite.css";
 import CONFIG from "../globals/config";
-const Gallery = (resto) => {
+const FavoritePage = (resto) => {
   return `
   <section id="list-resto">
       <div class="title-resto">
-      <h2>Cari tahu restoran terpopuler di kota Anda</h2>
-      <div>Dari Sabang hingga Merauke</div>
+      <h2>Favorite Saya (${resto.length > 0 ? resto.length : "Belum ada favorite"}) </h2>
       </div>
       <div class="list-content-resto">       
       ${resto
@@ -61,4 +60,4 @@ const Gallery = (resto) => {
       </div>
   </section>`;
 };
-export default Gallery;
+export default FavoritePage;

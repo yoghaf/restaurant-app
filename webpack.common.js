@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -44,6 +45,25 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "src/templates/index.html"),
     }),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: "./sw.bundle.js",
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp("https://restaurant-api.dicoding.dev"),
+          handler: "CacheFirst",
+          options: {
+            cacheName: "RestaurantApp-V1",
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24,
+            },
+          },
+        },
+      ],
+    }),
+
     new CopyWebpackPlugin({
       patterns: [
         {

@@ -1,12 +1,16 @@
+import FavoritePage from "../components/favorite";
+import FavoriteRestoIdb from "../data/favorite-resto";
 const Favorite = {
   async render() {
     return `
-        <h2>Favorite Page</h2>
+      <section id="favorite-pages"><section>
       `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const favorite = await FavoriteRestoIdb.getAllResto();
+    const favoritepages = document.querySelector("#favorite-pages");
+    favoritepages.innerHTML = FavoritePage(favorite);
   },
 };
 

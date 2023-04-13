@@ -2,6 +2,7 @@ import UrlParser from "../routes/url-parser";
 import Dicodingresto from "../data/dicoding-resto";
 import Details from "../components/details";
 import ReviewModal from "../components/review-modal";
+import FavoriteRestoIdb from "../data/favorite-resto";
 const Detail = {
   async render() {
     return `
@@ -19,22 +20,23 @@ const Detail = {
     console.log(detailrestodata);
     //favoritebtnevent
     const favoritebtn = document.querySelector("#favorite-button");
+
+    if (await FavoriteRestoIdb.getResto(detailrestodata.id)) {
+      const favoritefill = document.querySelector("#favorite-button svg path");
+      favoritefill.setAttribute("fill", "#d32f2f");
+    }
+
     favoritebtn.addEventListener("click", async () => {
       const favoritefill = document.querySelector("#favorite-button svg path");
-      if (favoritefill.getAttribute("fill") === "#ffffff") {
-        favoritefill.setAttribute("fill", "#DF2E38");
-      } else {
+      if (!(await FavoriteRestoIdb.getResto(detailrestodata.id)) && favoritefill.getAttribute("fill") === "#ffffff") {
+        favoritefill.setAttribute("fill", "#d32f2f");
+        await FavoriteRestoIdb.putResto(detailrestodata);
+      } else if ((await FavoriteRestoIdb.getResto(detailrestodata.id)) && favoritefill.getAttribute("fill") === "#d32f2f") {
         favoritefill.setAttribute("fill", "#ffffff");
+        await FavoriteRestoIdb.deleteResto(detailrestodata.id);
       }
-      const resto = {
-        id: detailrestodata.id,
-        name: detailrestodata.name,
-        description: detailrestodata.description,
-        pictureId: detailrestodata.pictureId,
-        city: detailrestodata.city,
-        rating: detailrestodata.rating,
-      };
-      console.log(resto);
+
+      console.log(await FavoriteRestoIdb.getAllResto());
     });
 
     //reviewbtnevent

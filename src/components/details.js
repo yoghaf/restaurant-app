@@ -1,4 +1,5 @@
 import "../styles/details.css";
+import CONFIG from "../globals/config";
 const Details = (resto) => {
   return `
     <div class="detail">
@@ -35,7 +36,7 @@ const Details = (resto) => {
     </div>
 <div class="detail-img">
     <div class="detail-img-resto">
-    <img src="https://restaurant-api.dicoding.dev/images/medium/${resto.pictureId}" alt="${resto.name}" />
+    <img src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}" alt="${resto.name}" />
     <button id="favorite-button">
       <svg viewBox="0 0 24 24"  class="">
         <path

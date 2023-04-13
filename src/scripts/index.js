@@ -6,7 +6,7 @@ import "../components/gallery";
 import "../components/footer";
 import renderPage from "../routes/render";
 import main from "../components/main";
-
+import swRegister from "../helpers/sw-register";
 document.addEventListener("DOMContentLoaded", () => {
   main();
 });
@@ -16,4 +16,5 @@ window.addEventListener("hashchange", () => {
 
 window.addEventListener("load", () => {
   renderPage();
+  swRegister();
 });

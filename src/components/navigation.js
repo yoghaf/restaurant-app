@@ -14,7 +14,7 @@ class Navigation extends HTMLElement {
         </button>
       </div>
       <div class="logo">
-        <a role="button" href="/">Eatreviews</a>
+        <a role="button" href="#/">Eatreviews</a>
       </div>
       <ul>
         <li><a role="button" href="#/">Home</a></li>
