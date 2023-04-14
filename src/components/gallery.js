@@ -11,7 +11,7 @@ const Gallery = (restos) => `
       ${restos
     .map(
       (resto) => `
-          <div>
+          <div class="cards-gallery">
           <div class="img-resto">
           <a role="button" href="#/detail/${resto.id}">
           <img src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}" alt="${resto.name}" />

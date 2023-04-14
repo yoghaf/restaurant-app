@@ -5,7 +5,6 @@ import ReviewModal from "../components/review-modal";
 import FavoriteRestoIdb from "../data/favorite-resto";
 import { LoadingDetail } from "../components/loading-details";
 import SuccessNotification from "../components/succes";
-import tabIndex from "../helpers/tabIndex";
 
 const Detail = {
   async render() {
@@ -88,7 +87,6 @@ const Detail = {
         }, 1000);
       }
     });
-    tabIndex();
   },
 };
 

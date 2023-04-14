@@ -1,15 +1,14 @@
 import Dicodingresto from "../data/dicoding-resto";
 import Gallery from "../components/gallery";
 import "../styles/loading-gallery.css";
-import tabIndex from "../helpers/tabIndex";
 
 const Loadinghome = () => `
   <div class="loading">
     <div class="container-loading">
       ${Array(8)
-        .fill()
-        .map(
-          () => `
+    .fill()
+    .map(
+      () => `
             <div class="card">
               <div class="card-image"></div>
               <div class="card-content">
@@ -18,9 +17,9 @@ const Loadinghome = () => `
                 <div class="card-city"></div>
               </div>
             </div>
-          `
-        )
-        .join("")}
+          `,
+    )
+    .join("")}
     </div>
   </div>
 `;
@@ -44,7 +43,6 @@ const Home = {
     const restoall = await Dicodingresto.allRestaurants();
     hideLoading();
     restolist.innerHTML = Gallery(restoall);
-    tabIndex();
   },
 };
 

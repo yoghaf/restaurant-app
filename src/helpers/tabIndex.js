@@ -6,13 +6,12 @@ const tabIndex = () => {
   });
 
   const skipLink = document.querySelector("#skip-link");
-  const content = document.querySelector("#list-resto");
+  const content = document.querySelector("#root");
 
-  skipLink.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      content.focus();
-    }
+  skipLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    content.scrollIntoView({ behavior: "smooth" });
+    skipLink.focus();
   });
 };
 

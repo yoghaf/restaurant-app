@@ -16,6 +16,18 @@
   grid-template-columns: repeat(1, 1fr);
   overflow: hidden;
   gap: 1em;
+  padding: 20px;
+}
+.cards-gallery {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  overflow: hidden;
+  position: relative;
+}
+.cards-gallery:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .list-content-resto div {
   cursor: pointer;
