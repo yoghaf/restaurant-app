@@ -1,4 +1,5 @@
 import "../styles/loading-detail.css";
+
 const LoadingDetail = () => `
   
     <div id="loading-detail">
@@ -19,22 +20,18 @@ const LoadingDetail = () => `
           <div class="menu">
           <div class="loading-title"></div>
        ${Array(5)
-         .fill()
-         .map((_, index) => {
-           return `   <div class="loading-title-description"></div>`;
-         })
-         .join("")}
+    .fill()
+    .map(() => "   <div class=\"loading-title-description\"></div>")
+    .join("")}
           </div>
         </div>
       </div>
       <div class="menu">
         <div class="loading-title"></div>
         ${Array(10)
-          .fill()
-          .map((_, index) => {
-            return `   <div class="loading-title-description"></div>`;
-          })
-          .join("")}
+    .fill()
+    .map(() => "   <div class=\"loading-title-description\"></div>")
+    .join("")}
       </div>
       <div class="menu">
         <div class="loading-title"></div>

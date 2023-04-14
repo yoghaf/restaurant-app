@@ -2,6 +2,8 @@ import FavoritePage from "../components/favorite";
 import FavoriteRestoIdb from "../data/favorite-resto";
 import Search from "../components/search";
 import "../styles/favorite.css";
+import tabIndex from "../helpers/tabIndex";
+
 const Favorite = {
   async render() {
     return `
@@ -21,10 +23,11 @@ const Favorite = {
     const favoritebtn = document.querySelector("#search-favorite-button");
     favoritebtn.addEventListener("click", async () => {
       const query = document.querySelector("#search-favorite-input").value;
-      const favorite = await FavoriteRestoIdb.getAllResto();
-
       if (query !== "") {
-        const result = favorite.filter((resto) => resto.name.toLowerCase().includes(query.toLowerCase()));
+        const filterCallback = (resto) => resto.name.toLowerCase().includes(query.toLowerCase());
+
+        const result = favorite.filter(filterCallback);
+
         if (result.length === 0) {
           const style = `
           display: flex;
@@ -33,6 +36,7 @@ const Favorite = {
           flex-direction: column;
           height: 50vh;
         `;
+
           favoritepages.innerHTML = `<div style = "${style}" class="not-found"><h1>Restauran Tidak ditemukan</h1></div>`;
         } else {
           favoritepages.innerHTML = FavoritePage(result);
@@ -40,7 +44,9 @@ const Favorite = {
       } else {
         favoritepages.innerHTML = FavoritePage(favorite);
       }
+      tabIndex();
     });
+    tabIndex();
   },
 };
 

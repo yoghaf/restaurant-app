@@ -1,4 +1,5 @@
 import "../styles/nav.css";
+
 class Navigation extends HTMLElement {
   connectedCallback() {
     this.render();

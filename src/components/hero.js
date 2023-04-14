@@ -1,5 +1,6 @@
 import "../styles/hero.css";
 import heromage from "../public/images/heros/hero-image_4.jpg";
+
 class Navigation extends HTMLElement {
   connectedCallback() {
     this.render();

@@ -1,6 +1,6 @@
 import "../styles/review-modal.css";
-const ReviewModal = (resto) => {
-  return `
+
+const ReviewModal = () => `
 <div id="modals">
     <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true"> 
     <form id="review-form">
@@ -17,5 +17,4 @@ const ReviewModal = (resto) => {
     </div>
 </div>
 `;
-};
 export default ReviewModal;

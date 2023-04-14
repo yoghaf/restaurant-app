@@ -1,4 +1,5 @@
 import "../styles/succesnotif.css";
+
 const SuccessNotification = () => `
 <div class="success">
 <p class="message">Submit berhasil!</p>

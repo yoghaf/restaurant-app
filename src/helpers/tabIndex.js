@@ -8,7 +8,7 @@ const tabIndex = () => {
   const skipLink = document.querySelector("#skip-link");
   const content = document.querySelector("#list-resto");
 
-  skipLink.addEventListener("keypress", function (e) {
+  skipLink.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       content.focus();

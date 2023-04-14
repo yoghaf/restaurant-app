@@ -1,5 +1,6 @@
-import UrlParser from "../routes/url-parser";
-import routes from "../routes/routes";
+import UrlParser from "./url-parser";
+import routes from "./routes";
+
 async function renderPage() {
   const url = UrlParser.parseActiveUrlWithCombiner();
   const page = routes[url];

@@ -1,13 +1,14 @@
+/* eslint-disable no-underscore-dangle */
 import { precacheAndRoute } from "workbox-precaching";
 
 // Do precaching
-precacheAndRoute(self.__WB_MANIFEST);
+precacheAndRoute(window.self.__WB_MANIFEST);
 
-self.addEventListener("install", () => {
+window.self.addEventListener("install", () => {
   console.log("Service Worker: Installed");
-  self.skipWaiting();
+  window.self.skipWaiting();
 });
 
-self.addEventListener("push", () => {
+window.self.addEventListener("push", () => {
   console.log("Service Worker: Pushed");
 });

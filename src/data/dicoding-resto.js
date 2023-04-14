@@ -1,11 +1,13 @@
 import API_ENDPOINT from "../globals/api-endpoint";
 import { hideLoading } from "../components/loading-details";
+
 class Dicodingresto {
   static async allRestaurants() {
     const response = await fetch(API_ENDPOINT.LIST);
     const responseJson = await response.json();
     return responseJson.restaurants;
   }
+
   static async detailRestaurant(id) {
     try {
       const response = await fetch(API_ENDPOINT.DETAIL(id));
@@ -15,7 +17,7 @@ class Dicodingresto {
     } catch (error) {
       console.log(error);
       hideLoading();
-      return null; // atau nilai default lain yang diinginkan
+      return null;
     }
   }
 
