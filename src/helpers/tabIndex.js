@@ -11,7 +11,7 @@ const tabIndex = () => {
   skipLink.addEventListener("click", (e) => {
     e.preventDefault();
     content.scrollIntoView({ behavior: "smooth" });
-    skipLink.focus();
+    skipLink.blur();
   });
 };
 

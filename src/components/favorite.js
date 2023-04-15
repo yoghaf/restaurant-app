@@ -13,7 +13,7 @@ const FavoritePage = (restos) => `
     .map(
       (resto) => `
           <div class="cards-gallery">
-          <div class="img-resto">
+          <div class="img-resto-favorite">
           <a role="button" href="#/detail/${resto.id}">
           <img src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}" alt="${resto.name}" />
         </a>

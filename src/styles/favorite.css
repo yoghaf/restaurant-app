@@ -16,7 +16,7 @@
   grid-template-columns: repeat(1, 1fr);
   overflow: hidden;
   gap: 1em;
-  padding: 20px;
+  padding: 10px;
 }
 .cards-gallery {
   background-color: #fff;
@@ -35,18 +35,19 @@
 .list-content-resto a {
   font-weight: bold;
 }
-.img-resto img:hover {
+.img-resto-favorite img:hover {
   opacity: 0.8;
   filter: brightness(110%);
 }
-.img-resto {
-  width: 300px;
+.img-resto-favorite {
+  width: 100%;
   position: relative;
 }
-.img-resto img {
+.img-resto-favorite img {
   width: 100%;
   object-fit: cover;
   height: 200px;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 658px) {
