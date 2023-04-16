@@ -1,7 +1,8 @@
 import "../styles/hero.css";
-import heromage from "../public/images/heros/hero-image_4.jpg";
+import heromage from "../public/images/heros/hero-large.jpg";
+import herosmall from "../public/images/heros/hero-small.jpg";
 
-class Navigation extends HTMLElement {
+class Hero extends HTMLElement {
   connectedCallback() {
     this.render();
   }
@@ -13,11 +14,16 @@ class Navigation extends HTMLElement {
       <h1>Indonesian Eatreviews</h1>
       <p>Hidangan nikmat tanpa merogoh kocek dalam-dalam!</p>
     </div>
-    <img src="${heromage}" alt="Gambar Restoran">
+    <picture>
+    <source media="(max-width: 600px)" srcset="${herosmall}">
+    <source type="image/webp" srcset="${heromage}">
+    <source type="image/jpeg" srcset="${heromage}">
+    <img  class ="lazyload" src="${heromage}" alt="Gambar Restoran">
+    </picture>
   </section>
       `;
   }
 }
 
 // Define the custom element
-customElements.define("hero-resto", Navigation);
+customElements.define("hero-resto", Hero);

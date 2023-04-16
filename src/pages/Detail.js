@@ -31,15 +31,17 @@ const Detail = {
     const favoritebtn = document.querySelector("#favorite-button");
     const favoritefill = document.querySelector("#favorite-button svg path");
 
-    if (await FavoriteRestoIdb.getResto(detailrestodata.id)) {
+    const isRestoInFavorites = await FavoriteRestoIdb.getResto(detailrestodata.id);
+    console.log(isRestoInFavorites);
+    if (isRestoInFavorites) {
       favoritefill.setAttribute("fill", "#d32f2f");
     }
 
     favoritebtn.addEventListener("click", async () => {
-      if (!(await FavoriteRestoIdb.getResto(detailrestodata.id)) && favoritefill.getAttribute("fill") === "#ffffff") {
+      if (!isRestoInFavorites && favoritefill.getAttribute("fill") === "#ffffff") {
         favoritefill.setAttribute("fill", "#d32f2f");
         await FavoriteRestoIdb.putResto(detailrestodata);
-      } else if ((await FavoriteRestoIdb.getResto(detailrestodata.id)) && favoritefill.getAttribute("fill") === "#d32f2f") {
+      } else if (isRestoInFavorites && favoritefill.getAttribute("fill") === "#d32f2f") {
         favoritefill.setAttribute("fill", "#ffffff");
         await FavoriteRestoIdb.deleteResto(detailrestodata.id);
       }

@@ -35,7 +35,7 @@ class Footer extends HTMLElement {
       <div class="footer-sec">
         <div class="footer-desc">
           <div class="footer-acordion">
-            <button class="footer-btn-close">
+            <button role="button" aria-label="open-btn" class="footer-btn-close">
               <svg viewBox="0 0 24 24" width="1em" height="1em" class="">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12H2.208v-1.5H22V12z"></path>
               </svg>

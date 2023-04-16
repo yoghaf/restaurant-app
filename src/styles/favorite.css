@@ -46,7 +46,7 @@
 .img-resto-favorite img {
   width: 100%;
   object-fit: cover;
-  height: 200px;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -59,6 +59,9 @@
 @media screen and (min-width: 1000px) {
   .list-content-resto {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .img-resto-favorite img {
+    height: 200px;
   }
 }
 @media screen and (min-width: 1200px) {

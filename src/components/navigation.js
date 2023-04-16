@@ -25,7 +25,8 @@ class Navigation extends HTMLElement {
     </nav>
     <div>
       <nav class="nav-hidden">
-        <button class="close-button">&times;</button>
+      <button role="button" aria-label="Tutup" class="close-button">&times;</button>
+
         <ul>
           <li><a role="button" href="#/">Home</a></li>
           <li><a role="button" href="#/favorite">Favorite</a></li>
