@@ -2,7 +2,7 @@ import "../styles/hero.css";
 import herolarge from "../public/images/heros/hero-large.jpg";
 import herosmall from "../public/images/heros/hero-small.jpg";
 
-class Navigation extends HTMLElement {
+class Hero extends HTMLElement {
   connectedCallback() {
     this.render();
   }
@@ -28,4 +28,4 @@ class Navigation extends HTMLElement {
 }
 
 // Define the custom element
-customElements.define("hero-resto", Navigation);
+customElements.define("hero-resto", Hero);

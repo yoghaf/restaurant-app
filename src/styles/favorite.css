@@ -35,18 +35,19 @@
 .list-content-resto a {
   font-weight: bold;
 }
-.img-resto img:hover {
+.img-resto-favorite img:hover {
   opacity: 0.8;
   filter: brightness(110%);
 }
-.img-resto {
-  width: 300px;
+.img-resto-favorite {
+  width: 100%;
   position: relative;
 }
-.img-resto img {
+.img-resto-favorite img {
   width: 100%;
   object-fit: cover;
-  height: 200px;
+  height: 100%;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 658px) {
@@ -58,6 +59,9 @@
 @media screen and (min-width: 1000px) {
   .list-content-resto {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .img-resto-favorite img {
+    height: 200px;
   }
 }
 @media screen and (min-width: 1200px) {
