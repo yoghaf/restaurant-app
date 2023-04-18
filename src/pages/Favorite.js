@@ -2,7 +2,6 @@ import FavoritePage from "../components/favorite";
 import FavoriteRestoIdb from "../data/favorite-resto";
 import Search from "../components/search";
 import "../styles/favorite.css";
-import tabIndex from "../helpers/tabIndex";
 
 const Favorite = {
   async render() {
@@ -44,9 +43,7 @@ const Favorite = {
       } else {
         favoritepages.innerHTML = FavoritePage(favorite);
       }
-      tabIndex();
     });
-    tabIndex();
   },
 };
 

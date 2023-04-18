@@ -6,6 +6,8 @@ import "../components/gallery";
 import "../components/footer";
 import renderPage from "../routes/render";
 import main from "../components/main";
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
 document.addEventListener("DOMContentLoaded", () => {
   main();

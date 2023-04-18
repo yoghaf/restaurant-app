@@ -1,5 +1,6 @@
 import "../styles/hero.css";
-import heromage from "../public/images/heros/hero-image_4.jpg";
+import herolarge from "../public/images/heros/hero-large.jpg";
+import herosmall from "../public/images/heros/hero-small.jpg";
 
 class Navigation extends HTMLElement {
   connectedCallback() {
@@ -13,7 +14,14 @@ class Navigation extends HTMLElement {
       <h1>Indonesian Eatreviews</h1>
       <p>Hidangan nikmat tanpa merogoh kocek dalam-dalam!</p>
     </div>
-    <img src="${heromage}" alt="Gambar Restoran">
+    <picture>
+    <source type="image/webp" srcset="${herosmall}">
+    <source type="image/jpeg" srcset="${herolarge}">
+    <source type="image/webp" srcset="${herosmall}">
+    <source type="image/jpeg" srcset="${herolarge}">
+    <source media="(max-width: 600px)" srcset="${herosmall}">
+    <img class="lazyload" data-src="${herolarge}" alt="hero image" />
+    </picture>
   </section>
       `;
   }

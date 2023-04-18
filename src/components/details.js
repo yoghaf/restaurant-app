@@ -36,10 +36,17 @@ const Details = (resto) => `
     </div>
 <div class="detail-img">
     <div class="detail-img-resto">
-    <img src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}" alt="${resto.name}" />
+    <picture>
+    <source type="image/webp" data-srcset="${CONFIG.BASE_IMAGE_URL_LARGE}${resto.pictureId}">
+    <source type="image/jpeg" data-srcset="${CONFIG.BASE_IMAGE_URL_LARGE}${resto.pictureId}">
+    <source type="image/webp" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${resto.pictureId}">
+    <source type="image/jpeg" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${resto.pictureId}">
+          <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${resto.pictureId}">
+    <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_LARGE}${resto.pictureId}" alt="${resto.name}" />
+    </picture>
     <button id="favorite-button">
       <svg viewBox="0 0 24 24"  class="">
-        <path
+        <path id="favoritefill"
           fill="#ffffff"
           d="M19.665 6.346a5.018 5.018 0 00-3.417-1.34c-1.27 0-2.491.478-3.417 1.34l-.84.802-.859-.812A5.019 5.019 0 007.72 5a5.019 5.019 0 00-3.412 1.336c-1.899 1.773-1.579 4.508-.01 6.43A101.233 101.233 0 0011.99 20s5.995-5.143 7.674-7.224c1.679-2.08 1.879-4.657 0-6.43z"
         ></path>

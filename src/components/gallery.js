@@ -11,15 +11,22 @@ const Gallery = (restos) => `
       ${restos
     .map(
       (resto) => `
-          <div>
+          <div class="cards-gallery">
           <div class="img-resto">
-          <a role="button" href="#/detail/${resto.id}">
-          <img src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}" alt="${resto.name}" />
+          <a id="button-img"  href="#/detail/${resto.id}">
+          <picture>
+          <source type="image/webp" data-srcset="${CONFIG.BASE_IMAGE_URL_LARGE}${resto.pictureId}">
+    <source type="image/jpeg" data-srcset="${CONFIG.BASE_IMAGE_URL_LARGE}${resto.pictureId}">
+    <source type="image/webp" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${resto.pictureId}">
+    <source type="image/jpeg" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${resto.pictureId}">
+          <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${resto.pictureId}">
+          <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_LARGE}${resto.pictureId}" alt="${resto.name}" />
+          </picture>
         </a>
       
           </div>
           <div>
-            <a role="button" href="#/detail/${resto.id}">
+            <a id="button-title" href="#/detail/${resto.id}">
               <div>${resto.name}</div>
             </a>
             <div>
